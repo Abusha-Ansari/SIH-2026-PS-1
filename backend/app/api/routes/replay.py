@@ -1,4 +1,5 @@
-from fastapi import APIRouter
+from typing import Optional
+from fastapi import APIRouter, Query
 from app.replay.service import ReplayService
 from app.utils.response import error_response, success_response
 
@@ -10,6 +11,22 @@ async def get_replay_events():
     try:
         events = ReplayService.get_events()
         return success_response(events)
+    except Exception as e:
+        return error_response("REPLAY_ERROR", str(e), status_code=500)
+
+
+@router.get("/replay/frame")
+async def get_replay_frame_query(
+    event_id: Optional[str] = Query(default="mumbai-severe-convective-event"),
+    step: Optional[int] = Query(default=None),
+    frame_index: Optional[int] = Query(default=None)
+):
+    try:
+        idx = step if step is not None else (frame_index if frame_index is not None else 0)
+        frame = ReplayService.get_frame(event_id, idx)
+        if not frame:
+            return error_response("FRAME_NOT_FOUND", f"Frame index {idx} out of bounds", status_code=404)
+        return success_response(frame.model_dump(by_alias=True, mode="json"))
     except Exception as e:
         return error_response("REPLAY_ERROR", str(e), status_code=500)
 

@@ -7,9 +7,14 @@ router = APIRouter(tags=["Forecast"])
 
 
 @router.get("/forecast")
-async def get_forecast(scenario: Optional[str] = Query(default=None)):
+@router.get("/forecast/nowcast")
+async def get_forecast(
+    scenario: Optional[str] = Query(default=None),
+    scenario_id: Optional[str] = Query(default=None)
+):
     try:
-        data = MockDataLoader.load_scenario(scenario)
+        active_scenario = scenario or scenario_id
+        data = MockDataLoader.load_scenario(active_scenario)
         return success_response({
             "timestamp": data.get("timestamp"),
             "forecast": data.get("forecast", {}),
@@ -23,9 +28,14 @@ async def get_forecast(scenario: Optional[str] = Query(default=None)):
 
 
 @router.get("/forecast/{interval}")
-async def get_forecast_by_interval(interval: str, scenario: Optional[str] = Query(default=None)):
+async def get_forecast_by_interval(
+    interval: str,
+    scenario: Optional[str] = Query(default=None),
+    scenario_id: Optional[str] = Query(default=None)
+):
     try:
-        data = MockDataLoader.load_scenario(scenario)
+        active_scenario = scenario or scenario_id
+        data = MockDataLoader.load_scenario(active_scenario)
         forecasts = data.get("forecast", {})
         key = interval if interval.endswith("min") else f"{interval}min"
         if key not in forecasts:

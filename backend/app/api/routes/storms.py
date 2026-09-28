@@ -7,9 +7,14 @@ router = APIRouter(tags=["Storm Cells"])
 
 
 @router.get("/storms")
-async def get_storms(scenario: Optional[str] = Query(default=None)):
+@router.get("/storms/cells")
+async def get_storms(
+    scenario: Optional[str] = Query(default=None),
+    scenario_id: Optional[str] = Query(default=None)
+):
     try:
-        data = MockDataLoader.load_scenario(scenario)
+        active_scenario = scenario or scenario_id
+        data = MockDataLoader.load_scenario(active_scenario)
         cells = data.get("active_storm_cells", [])
         return success_response(cells)
     except Exception as e:
@@ -17,9 +22,14 @@ async def get_storms(scenario: Optional[str] = Query(default=None)):
 
 
 @router.get("/storms/{storm_id}")
-async def get_storm_by_id(storm_id: str, scenario: Optional[str] = Query(default=None)):
+async def get_storm_by_id(
+    storm_id: str,
+    scenario: Optional[str] = Query(default=None),
+    scenario_id: Optional[str] = Query(default=None)
+):
     try:
-        data = MockDataLoader.load_scenario(scenario)
+        active_scenario = scenario or scenario_id
+        data = MockDataLoader.load_scenario(active_scenario)
         cells = data.get("active_storm_cells", [])
         for cell in cells:
             if cell.get("id") == storm_id:

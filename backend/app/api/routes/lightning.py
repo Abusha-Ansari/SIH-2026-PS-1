@@ -8,9 +8,14 @@ lightning_provider = MockLightningProvider()
 
 
 @router.get("/lightning")
-async def get_lightning(scenario: Optional[str] = Query(default=None)):
+@router.get("/lightning/live")
+async def get_lightning(
+    scenario: Optional[str] = Query(default=None),
+    scenario_id: Optional[str] = Query(default=None)
+):
     try:
-        data = await lightning_provider.get_lightning_observations(scenario_id=scenario or "scenario-developing")
+        active_scenario = scenario or scenario_id or "scenario-developing"
+        data = await lightning_provider.get_lightning_observations(scenario_id=active_scenario)
         return success_response(data.model_dump(mode="json"))
     except Exception as e:
         return error_response("LIGHTNING_ERROR", str(e), status_code=500)
