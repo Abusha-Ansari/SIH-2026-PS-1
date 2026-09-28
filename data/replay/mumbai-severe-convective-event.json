@@ -1,0 +1,336 @@
+{
+  "event": {
+    "id": "mumbai-severe-convective-event",
+    "name": "Mumbai Severe Convective Thunderstorm Event",
+    "region": "Mumbai Metropolitan Region (MMR)",
+    "date": "2025-07-15",
+    "description": "Historical validation dataset: Rapidly intensifying evening squall with over 500 lightning strikes and 85 mm/h peak rain rate recorded across IMD Santacruz & Colaba radars.",
+    "total_frames": 7,
+    "interval_minutes": 10,
+    "start_time": "14:00 IST",
+    "end_time": "15:00 IST",
+    "has_ground_truth": true
+  },
+  "frames": [
+    {
+      "frame_index": 0,
+      "timestamp": "14:00 IST",
+      "storm_cells": [
+        {
+          "id": "HIST-CELL-01",
+          "name": "Initial Convective Cumulus",
+          "timestamp": "14:00 IST",
+          "lat": 19.32,
+          "lon": 73.20,
+          "intensity_dbz": 42.0,
+          "intensity_level": "MODERATE",
+          "direction_deg": 235.0,
+          "direction_cardinal": "SW",
+          "speed_kmh": 38.0,
+          "radius_km": 10.0,
+          "lightning_probability": 0.40,
+          "risk_level": "MEDIUM",
+          "trajectory": []
+        }
+      ],
+      "lightning_strikes": [
+        { "id": "H-LTG-01", "timestamp": "13:58 IST", "lat": 19.31, "lon": 73.19, "peak_current_ka": -25.0, "strike_type": "IC", "polarity": "NEGATIVE" }
+      ],
+      "forecast": {
+        "15min": { "interval_minutes": 15, "target_timestamp": "14:15 IST", "thunderstorm_probability": 0.55, "lightning_probability": 0.45, "rain_intensity_mmh": 22.0, "storm_intensity": "MODERATE", "confidence": 0.90 },
+        "30min": { "interval_minutes": 30, "target_timestamp": "14:30 IST", "thunderstorm_probability": 0.70, "lightning_probability": 0.62, "rain_intensity_mmh": 40.0, "storm_intensity": "HIGH", "confidence": 0.88 },
+        "45min": { "interval_minutes": 45, "target_timestamp": "14:45 IST", "thunderstorm_probability": 0.82, "lightning_probability": 0.78, "rain_intensity_mmh": 65.0, "storm_intensity": "HIGH", "confidence": 0.85 },
+        "60min": { "interval_minutes": 60, "target_timestamp": "15:00 IST", "thunderstorm_probability": 0.90, "lightning_probability": 0.86, "rain_intensity_mmh": 80.0, "storm_intensity": "SEVERE", "confidence": 0.82 }
+      },
+      "risk": {
+        "level": "MEDIUM",
+        "score": 58.0,
+        "confidence": 0.88,
+        "primary_threat": "DEVELOPING_CONVECTION",
+        "factors": [
+          { "category": "RADAR", "factor_name": "Updraft Echo Formation", "observed_value": "42 dBZ", "threshold": "> 40 dBZ", "impact_level": "MODERATE", "scientific_summary": "First echo detection above 5km altitude." }
+        ],
+        "actionable_recommendations": ["Issue preliminary nowcast watch for eastern suburbs."]
+      },
+      "ground_truth_observation": {
+        "actual_reflectivity_dbz": 43.5,
+        "actual_lightning_count": 8,
+        "radar_source": "IMD Mumbai S-Band Doppler Weather Radar"
+      }
+    },
+    {
+      "frame_index": 1,
+      "timestamp": "14:10 IST",
+      "storm_cells": [
+        {
+          "id": "HIST-CELL-01",
+          "name": "Intensifying Convective Core",
+          "timestamp": "14:10 IST",
+          "lat": 19.27,
+          "lon": 73.13,
+          "intensity_dbz": 48.5,
+          "intensity_level": "HIGH",
+          "direction_deg": 235.0,
+          "direction_cardinal": "SW",
+          "speed_kmh": 40.0,
+          "radius_km": 13.0,
+          "lightning_probability": 0.65,
+          "risk_level": "HIGH",
+          "trajectory": []
+        }
+      ],
+      "lightning_strikes": [
+        { "id": "H-LTG-02", "timestamp": "14:08 IST", "lat": 19.26, "lon": 73.12, "peak_current_ka": -42.0, "strike_type": "CG", "polarity": "NEGATIVE" }
+      ],
+      "forecast": {
+        "15min": { "interval_minutes": 15, "target_timestamp": "14:25 IST", "thunderstorm_probability": 0.72, "lightning_probability": 0.68, "rain_intensity_mmh": 45.0, "storm_intensity": "HIGH", "confidence": 0.91 },
+        "30min": { "interval_minutes": 30, "target_timestamp": "14:40 IST", "thunderstorm_probability": 0.85, "lightning_probability": 0.80, "rain_intensity_mmh": 68.0, "storm_intensity": "SEVERE", "confidence": 0.89 },
+        "45min": { "interval_minutes": 45, "target_timestamp": "14:55 IST", "thunderstorm_probability": 0.92, "lightning_probability": 0.88, "rain_intensity_mmh": 82.0, "storm_intensity": "SEVERE", "confidence": 0.86 },
+        "60min": { "interval_minutes": 60, "target_timestamp": "15:10 IST", "thunderstorm_probability": 0.88, "lightning_probability": 0.82, "rain_intensity_mmh": 75.0, "storm_intensity": "SEVERE", "confidence": 0.83 }
+      },
+      "risk": {
+        "level": "HIGH",
+        "score": 75.0,
+        "confidence": 0.90,
+        "primary_threat": "LIGHTNING_AND_RAIN",
+        "factors": [
+          { "category": "RADAR", "factor_name": "Rapid Vertical Growth", "observed_value": "48.5 dBZ", "threshold": "> 45 dBZ", "impact_level": "HIGH", "scientific_summary": "Echo top crossed 11km." }
+        ],
+        "actionable_recommendations": ["Escalate warning to Yellow Watch."]
+      },
+      "ground_truth_observation": {
+        "actual_reflectivity_dbz": 49.0,
+        "actual_lightning_count": 24,
+        "radar_source": "IMD Mumbai S-Band Doppler Weather Radar"
+      }
+    },
+    {
+      "frame_index": 2,
+      "timestamp": "14:20 IST",
+      "storm_cells": [
+        {
+          "id": "HIST-CELL-01",
+          "name": "Mature Supercell Core",
+          "timestamp": "14:20 IST",
+          "lat": 19.22,
+          "lon": 73.06,
+          "intensity_dbz": 54.0,
+          "intensity_level": "SEVERE",
+          "direction_deg": 235.0,
+          "direction_cardinal": "SW",
+          "speed_kmh": 42.0,
+          "radius_km": 16.0,
+          "lightning_probability": 0.85,
+          "risk_level": "HIGH",
+          "trajectory": []
+        }
+      ],
+      "lightning_strikes": [
+        { "id": "H-LTG-03", "timestamp": "14:18 IST", "lat": 19.21, "lon": 73.05, "peak_current_ka": -68.0, "strike_type": "CG", "polarity": "NEGATIVE" }
+      ],
+      "forecast": {
+        "15min": { "interval_minutes": 15, "target_timestamp": "14:35 IST", "thunderstorm_probability": 0.88, "lightning_probability": 0.82, "rain_intensity_mmh": 68.0, "storm_intensity": "SEVERE", "confidence": 0.92 },
+        "30min": { "interval_minutes": 30, "target_timestamp": "14:50 IST", "thunderstorm_probability": 0.94, "lightning_probability": 0.90, "rain_intensity_mmh": 85.0, "storm_intensity": "SEVERE", "confidence": 0.90 },
+        "45min": { "interval_minutes": 45, "target_timestamp": "15:05 IST", "thunderstorm_probability": 0.91, "lightning_probability": 0.85, "rain_intensity_mmh": 78.0, "storm_intensity": "SEVERE", "confidence": 0.87 },
+        "60min": { "interval_minutes": 60, "target_timestamp": "15:20 IST", "thunderstorm_probability": 0.78, "lightning_probability": 0.70, "rain_intensity_mmh": 50.0, "storm_intensity": "HIGH", "confidence": 0.84 }
+      },
+      "risk": {
+        "level": "HIGH",
+        "score": 88.0,
+        "confidence": 0.91,
+        "primary_threat": "SEVERE_LIGHTNING",
+        "factors": [
+          { "category": "LIGHTNING", "factor_name": "CG Discharge Spike", "observed_value": "48 CG strikes", "threshold": "> 30", "impact_level": "HIGH", "scientific_summary": "Intense lightning flash jump detected." }
+        ],
+        "actionable_recommendations": ["Issue Orange Alert for Thane and Mumbai suburban rail networks."]
+      },
+      "ground_truth_observation": {
+        "actual_reflectivity_dbz": 54.8,
+        "actual_lightning_count": 62,
+        "radar_source": "IMD Mumbai S-Band Doppler Weather Radar"
+      }
+    },
+    {
+      "frame_index": 3,
+      "timestamp": "14:30 IST",
+      "storm_cells": [
+        {
+          "id": "HIST-CELL-01",
+          "name": "Severe Convective Storm Core",
+          "timestamp": "14:30 IST",
+          "lat": 19.16,
+          "lon": 72.98,
+          "intensity_dbz": 59.5,
+          "intensity_level": "SEVERE",
+          "direction_deg": 235.0,
+          "direction_cardinal": "SW",
+          "speed_kmh": 44.0,
+          "radius_km": 18.0,
+          "lightning_probability": 0.95,
+          "risk_level": "EXTREME",
+          "trajectory": []
+        }
+      ],
+      "lightning_strikes": [
+        { "id": "H-LTG-04", "timestamp": "14:29 IST", "lat": 19.15, "lon": 72.97, "peak_current_ka": -85.0, "strike_type": "CG", "polarity": "NEGATIVE" }
+      ],
+      "forecast": {
+        "15min": { "interval_minutes": 15, "target_timestamp": "14:45 IST", "thunderstorm_probability": 0.96, "lightning_probability": 0.92, "rain_intensity_mmh": 88.0, "storm_intensity": "SEVERE", "confidence": 0.94 },
+        "30min": { "interval_minutes": 30, "target_timestamp": "15:00 IST", "thunderstorm_probability": 0.98, "lightning_probability": 0.95, "rain_intensity_mmh": 92.0, "storm_intensity": "SEVERE", "confidence": 0.92 },
+        "45min": { "interval_minutes": 45, "target_timestamp": "15:15 IST", "thunderstorm_probability": 0.86, "lightning_probability": 0.80, "rain_intensity_mmh": 60.0, "storm_intensity": "HIGH", "confidence": 0.88 },
+        "60min": { "interval_minutes": 60, "target_timestamp": "15:30 IST", "thunderstorm_probability": 0.65, "lightning_probability": 0.55, "rain_intensity_mmh": 32.0, "storm_intensity": "MODERATE", "confidence": 0.83 }
+      },
+      "risk": {
+        "level": "EXTREME",
+        "score": 95.0,
+        "confidence": 0.93,
+        "primary_threat": "EXTREME_LIGHTNING_AND_DOWNBURST",
+        "factors": [
+          { "category": "RADAR", "factor_name": "Peak Core Surge", "observed_value": "59.5 dBZ", "threshold": "> 55 dBZ", "impact_level": "CRITICAL", "scientific_summary": "Extremely heavy hail/water volume." }
+        ],
+        "actionable_recommendations": ["RED ALERT: Halt airport approaches and ground activities immediately."]
+      },
+      "ground_truth_observation": {
+        "actual_reflectivity_dbz": 60.2,
+        "actual_lightning_count": 110,
+        "radar_source": "IMD Mumbai S-Band Doppler Weather Radar"
+      }
+    },
+    {
+      "frame_index": 4,
+      "timestamp": "14:40 IST",
+      "storm_cells": [
+        {
+          "id": "HIST-CELL-01",
+          "name": "Direct Impact Over City",
+          "timestamp": "14:40 IST",
+          "lat": 19.10,
+          "lon": 72.90,
+          "intensity_dbz": 61.0,
+          "intensity_level": "EXTREME",
+          "direction_deg": 235.0,
+          "direction_cardinal": "SW",
+          "speed_kmh": 42.0,
+          "radius_km": 20.0,
+          "lightning_probability": 0.98,
+          "risk_level": "EXTREME",
+          "trajectory": []
+        }
+      ],
+      "lightning_strikes": [
+        { "id": "H-LTG-05", "timestamp": "14:39 IST", "lat": 19.09, "lon": 72.89, "peak_current_ka": -92.0, "strike_type": "CG", "polarity": "NEGATIVE" }
+      ],
+      "forecast": {
+        "15min": { "interval_minutes": 15, "target_timestamp": "14:55 IST", "thunderstorm_probability": 0.98, "lightning_probability": 0.95, "rain_intensity_mmh": 92.0, "storm_intensity": "SEVERE", "confidence": 0.95 },
+        "30min": { "interval_minutes": 30, "target_timestamp": "15:10 IST", "thunderstorm_probability": 0.88, "lightning_probability": 0.82, "rain_intensity_mmh": 65.0, "storm_intensity": "HIGH", "confidence": 0.91 },
+        "45min": { "interval_minutes": 45, "target_timestamp": "15:25 IST", "thunderstorm_probability": 0.68, "lightning_probability": 0.58, "rain_intensity_mmh": 35.0, "storm_intensity": "MODERATE", "confidence": 0.86 },
+        "60min": { "interval_minutes": 60, "target_timestamp": "15:40 IST", "thunderstorm_probability": 0.40, "lightning_probability": 0.30, "rain_intensity_mmh": 15.0, "storm_intensity": "LOW", "confidence": 0.82 }
+      },
+      "risk": {
+        "level": "EXTREME",
+        "score": 98.0,
+        "confidence": 0.96,
+        "primary_threat": "DIRECT_CITY_IMPACT",
+        "factors": [
+          { "category": "RADAR", "factor_name": "Maximum Inundation Volume", "observed_value": "61 dBZ", "threshold": "> 60 dBZ", "impact_level": "CRITICAL", "scientific_summary": "Core centered over urban drainage basin." }
+        ],
+        "actionable_recommendations": ["Remain indoors; do not enter flooded subways."]
+      },
+      "ground_truth_observation": {
+        "actual_reflectivity_dbz": 61.5,
+        "actual_lightning_count": 145,
+        "radar_source": "IMD Mumbai S-Band Doppler Weather Radar"
+      }
+    },
+    {
+      "frame_index": 5,
+      "timestamp": "14:50 IST",
+      "storm_cells": [
+        {
+          "id": "HIST-CELL-01",
+          "name": "Seaward Moving Squall",
+          "timestamp": "14:50 IST",
+          "lat": 19.04,
+          "lon": 72.82,
+          "intensity_dbz": 52.0,
+          "intensity_level": "HIGH",
+          "direction_deg": 235.0,
+          "direction_cardinal": "SW",
+          "speed_kmh": 40.0,
+          "radius_km": 18.0,
+          "lightning_probability": 0.80,
+          "risk_level": "HIGH",
+          "trajectory": []
+        }
+      ],
+      "lightning_strikes": [
+        { "id": "H-LTG-06", "timestamp": "14:48 IST", "lat": 19.03, "lon": 72.81, "peak_current_ka": -45.0, "strike_type": "CG", "polarity": "NEGATIVE" }
+      ],
+      "forecast": {
+        "15min": { "interval_minutes": 15, "target_timestamp": "15:05 IST", "thunderstorm_probability": 0.80, "lightning_probability": 0.72, "rain_intensity_mmh": 50.0, "storm_intensity": "HIGH", "confidence": 0.92 },
+        "30min": { "interval_minutes": 30, "target_timestamp": "15:20 IST", "thunderstorm_probability": 0.55, "lightning_probability": 0.45, "rain_intensity_mmh": 25.0, "storm_intensity": "MODERATE", "confidence": 0.88 },
+        "45min": { "interval_minutes": 45, "target_timestamp": "15:35 IST", "thunderstorm_probability": 0.30, "lightning_probability": 0.20, "rain_intensity_mmh": 10.0, "storm_intensity": "LOW", "confidence": 0.84 },
+        "60min": { "interval_minutes": 60, "target_timestamp": "15:50 IST", "thunderstorm_probability": 0.15, "lightning_probability": 0.08, "rain_intensity_mmh": 4.0, "storm_intensity": "LOW", "confidence": 0.80 }
+      },
+      "risk": {
+        "level": "HIGH",
+        "score": 80.0,
+        "confidence": 0.91,
+        "primary_threat": "EXITING_PRECIPITATION",
+        "factors": [
+          { "category": "TRAJECTORY", "factor_name": "Storm Moving into Arabian Sea", "observed_value": "Over offshore waters", "threshold": "Exiting land area", "impact_level": "MODERATE", "scientific_summary": "Threat over metropolitan land decreasing." }
+        ],
+        "actionable_recommendations": ["Continue cautionary status for offshore fishing vessels."]
+      },
+      "ground_truth_observation": {
+        "actual_reflectivity_dbz": 51.5,
+        "actual_lightning_count": 82,
+        "radar_source": "IMD Mumbai S-Band Doppler Weather Radar"
+      }
+    },
+    {
+      "frame_index": 6,
+      "timestamp": "15:00 IST",
+      "storm_cells": [
+        {
+          "id": "HIST-CELL-01",
+          "name": "Dissipating Offshore Cell",
+          "timestamp": "15:00 IST",
+          "lat": 18.98,
+          "lon": 72.74,
+          "intensity_dbz": 41.0,
+          "intensity_level": "MODERATE",
+          "direction_deg": 235.0,
+          "direction_cardinal": "SW",
+          "speed_kmh": 36.0,
+          "radius_km": 14.0,
+          "lightning_probability": 0.45,
+          "risk_level": "MEDIUM",
+          "trajectory": []
+        }
+      ],
+      "lightning_strikes": [],
+      "forecast": {
+        "15min": { "interval_minutes": 15, "target_timestamp": "15:15 IST", "thunderstorm_probability": 0.40, "lightning_probability": 0.30, "rain_intensity_mmh": 18.0, "storm_intensity": "MODERATE", "confidence": 0.90 },
+        "30min": { "interval_minutes": 30, "target_timestamp": "15:30 IST", "thunderstorm_probability": 0.20, "lightning_probability": 0.12, "rain_intensity_mmh": 6.0, "storm_intensity": "LOW", "confidence": 0.86 },
+        "45min": { "interval_minutes": 45, "target_timestamp": "15:45 IST", "thunderstorm_probability": 0.08, "lightning_probability": 0.04, "rain_intensity_mmh": 1.0, "storm_intensity": "LOW", "confidence": 0.82 },
+        "60min": { "interval_minutes": 60, "target_timestamp": "16:00 IST", "thunderstorm_probability": 0.02, "lightning_probability": 0.01, "rain_intensity_mmh": 0.0, "storm_intensity": "LOW", "confidence": 0.80 }
+      },
+      "risk": {
+        "level": "MEDIUM",
+        "score": 45.0,
+        "confidence": 0.89,
+        "primary_threat": "RESIDUAL_LIGHT_RAIN",
+        "factors": [
+          { "category": "RADAR", "factor_name": "Decaying Offshore Signature", "observed_value": "41 dBZ", "threshold": "< 45 dBZ", "impact_level": "LOW", "scientific_summary": "Storm core has vacated urban landmass." }
+        ],
+        "actionable_recommendations": ["Reopen standard operations."]
+      },
+      "ground_truth_observation": {
+        "actual_reflectivity_dbz": 40.0,
+        "actual_lightning_count": 18,
+        "radar_source": "IMD Mumbai S-Band Doppler Weather Radar"
+      }
+    }
+  ]
+}

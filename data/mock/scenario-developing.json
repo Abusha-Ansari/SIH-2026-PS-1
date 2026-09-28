@@ -1,0 +1,244 @@
+{
+  "scenario_id": "scenario-developing",
+  "name": "Developing Convective Storm",
+  "description": "Rapidly developing thunderstorm cell with increasing radar reflectivity and cloud-top cooling over Kalyan-Thane sector propagating toward Mumbai.",
+  "target_location": {
+    "lat": 19.076,
+    "lon": 72.877,
+    "name": "Mumbai Metropolitan Area"
+  },
+  "timestamp": "2026-09-27T14:30:00Z",
+  "current_eta_minutes": 28,
+  "storm_distance_km": 32.5,
+  "bearing_deg": 48.0,
+  "cardinal_direction": "NE",
+  "forecast": {
+    "15min": {
+      "interval_minutes": 15,
+      "target_timestamp": "2026-09-27T14:45:00Z",
+      "thunderstorm_probability": 0.72,
+      "lightning_probability": 0.65,
+      "rain_intensity_mmh": 42.0,
+      "storm_intensity": "MODERATE",
+      "confidence": 0.91
+    },
+    "30min": {
+      "interval_minutes": 30,
+      "target_timestamp": "2026-09-27T15:00:00Z",
+      "thunderstorm_probability": 0.88,
+      "lightning_probability": 0.81,
+      "rain_intensity_mmh": 67.5,
+      "storm_intensity": "HIGH",
+      "confidence": 0.89
+    },
+    "45min": {
+      "interval_minutes": 45,
+      "target_timestamp": "2026-09-27T15:15:00Z",
+      "thunderstorm_probability": 0.91,
+      "lightning_probability": 0.87,
+      "rain_intensity_mmh": 72.0,
+      "storm_intensity": "SEVERE",
+      "confidence": 0.86
+    },
+    "60min": {
+      "interval_minutes": 60,
+      "target_timestamp": "2026-09-27T15:30:00Z",
+      "thunderstorm_probability": 0.76,
+      "lightning_probability": 0.70,
+      "rain_intensity_mmh": 51.0,
+      "storm_intensity": "HIGH",
+      "confidence": 0.82
+    }
+  },
+  "active_storm_cells": [
+    {
+      "id": "CELL-MMR-DEV-01",
+      "name": "Thane-Kalyan Supercell",
+      "timestamp": "2026-09-27T14:30:00Z",
+      "lat": 19.235,
+      "lon": 73.129,
+      "intensity_dbz": 54.5,
+      "intensity_level": "SEVERE",
+      "direction_deg": 228.0,
+      "direction_cardinal": "SW",
+      "speed_kmh": 42.0,
+      "radius_km": 14.5,
+      "lightning_probability": 0.85,
+      "risk_level": "HIGH",
+      "top_altitude_km": 14.2,
+      "trajectory": [
+        {
+          "offset_minutes": 0,
+          "timestamp": "2026-09-27T14:30:00Z",
+          "lat": 19.235,
+          "lon": 73.129,
+          "radius_km": 14.5,
+          "intensity_dbz": 54.5,
+          "confidence": 0.98
+        },
+        {
+          "offset_minutes": 15,
+          "timestamp": "2026-09-27T14:45:00Z",
+          "lat": 19.168,
+          "lon": 73.042,
+          "radius_km": 16.0,
+          "intensity_dbz": 57.0,
+          "confidence": 0.92
+        },
+        {
+          "offset_minutes": 30,
+          "timestamp": "2026-09-27T15:00:00Z",
+          "lat": 19.095,
+          "lon": 72.945,
+          "radius_km": 18.0,
+          "intensity_dbz": 58.5,
+          "confidence": 0.89
+        },
+        {
+          "offset_minutes": 45,
+          "timestamp": "2026-09-27T15:15:00Z",
+          "lat": 19.032,
+          "lon": 72.855,
+          "radius_km": 17.0,
+          "intensity_dbz": 53.0,
+          "confidence": 0.85
+        },
+        {
+          "offset_minutes": 60,
+          "timestamp": "2026-09-27T15:30:00Z",
+          "lat": 18.960,
+          "lon": 72.760,
+          "radius_km": 14.0,
+          "intensity_dbz": 46.0,
+          "confidence": 0.80
+        }
+      ]
+    }
+  ],
+  "lightning_observations": {
+    "timestamp": "2026-09-27T14:30:00Z",
+    "total_strikes_last_15m": 68,
+    "cg_strikes_count": 42,
+    "ic_strikes_count": 26,
+    "strikes": [
+      {
+        "id": "LTG-01",
+        "timestamp": "2026-09-27T14:28:15Z",
+        "lat": 19.221,
+        "lon": 73.112,
+        "peak_current_ka": -48.5,
+        "strike_type": "CG",
+        "polarity": "NEGATIVE"
+      },
+      {
+        "id": "LTG-02",
+        "timestamp": "2026-09-27T14:27:40Z",
+        "lat": 19.245,
+        "lon": 73.138,
+        "peak_current_ka": 62.1,
+        "strike_type": "CG",
+        "polarity": "POSITIVE"
+      },
+      {
+        "id": "LTG-03",
+        "timestamp": "2026-09-27T14:26:50Z",
+        "lat": 19.210,
+        "lon": 73.098,
+        "peak_current_ka": -35.2,
+        "strike_type": "IC",
+        "polarity": "NEGATIVE"
+      },
+      {
+        "id": "LTG-04",
+        "timestamp": "2026-09-27T14:25:12Z",
+        "lat": 19.230,
+        "lon": 73.125,
+        "peak_current_ka": -55.0,
+        "strike_type": "CG",
+        "polarity": "NEGATIVE"
+      },
+      {
+        "id": "LTG-05",
+        "timestamp": "2026-09-27T14:24:01Z",
+        "lat": 19.198,
+        "lon": 73.072,
+        "peak_current_ka": -41.3,
+        "strike_type": "CG",
+        "polarity": "NEGATIVE"
+      }
+    ],
+    "density_heatmap": [
+      { "lat": 19.23, "lon": 73.12, "flash_count_per_sqkm": 8.4, "risk_level": "HIGH" },
+      { "lat": 19.21, "lon": 73.10, "flash_count_per_sqkm": 6.2, "risk_level": "HIGH" },
+      { "lat": 19.18, "lon": 73.05, "flash_count_per_sqkm": 3.8, "risk_level": "MEDIUM" },
+      { "lat": 19.12, "lon": 72.98, "flash_count_per_sqkm": 1.9, "risk_level": "LOW" }
+    ]
+  },
+  "risk_assessment": {
+    "level": "HIGH",
+    "score": 88.5,
+    "confidence": 0.89,
+    "primary_threat": "LIGHTNING_AND_HEAVY_DOWNPOUR",
+    "factors": [
+      {
+        "category": "RADAR",
+        "factor_name": "Radar Reflectivity Core Surge",
+        "observed_value": "54.5 dBZ",
+        "threshold": "> 45.0 dBZ",
+        "impact_level": "HIGH",
+        "scientific_summary": "High-density hydrometeor volume indicates severe convective updraft with hail potential."
+      },
+      {
+        "category": "SATELLITE",
+        "factor_name": "Rapid Cloud-Top Cooling Rate",
+        "observed_value": "-64.2 °C (Cooling at -4.1 °C / 15m)",
+        "threshold": "< -52.0 °C",
+        "impact_level": "CRITICAL",
+        "scientific_summary": "Intense vertical cloud growth reaching overshooting tropopause level."
+      },
+      {
+        "category": "LIGHTNING",
+        "factor_name": "Cloud-to-Ground Lightning Flash Jump",
+        "observed_value": "42 CG strikes in last 15 min",
+        "threshold": "> 20 strikes / 15m",
+        "impact_level": "HIGH",
+        "scientific_summary": "Sudden multiplication of CG discharges strongly correlates with microbursts and gust fronts."
+      },
+      {
+        "category": "TRAJECTORY",
+        "factor_name": "Direct Forward Cell Advection",
+        "observed_value": "Propagating 228° SW at 42 km/h",
+        "threshold": "Intersects MMR urban basin",
+        "impact_level": "HIGH",
+        "scientific_summary": "Downwind propagation vector brings core precipitation center directly over target within 28 mins."
+      }
+    ],
+    "actionable_recommendations": [
+      "Suspend outdoor ground activities and crane operations across MMR.",
+      "Activate urban drainage flood gates along central arterial corridors.",
+      "Issue aviation holding advisories for runway approaches (VABB / BOM).",
+      "Advise general public to seek non-metallic shelter from cloud-to-ground lightning."
+    ]
+  },
+  "active_alerts": [
+    {
+      "id": "ALT-2026-0927-01",
+      "severity": "CRITICAL",
+      "type": "LIGHTNING",
+      "title": "Severe Lightning & Thunderstorm Warning",
+      "message": "High-intensity convective thunderstorm cell approaching Mumbai from Thane-Kalyan sector. High frequency Cloud-to-Ground lightning expected within 25-30 minutes.",
+      "region_name": "Mumbai Metropolitan Region",
+      "center_lat": 19.076,
+      "center_lon": 72.877,
+      "radius_km": 35.0,
+      "eta_minutes": 28,
+      "created_at": "2026-09-27T14:30:00Z",
+      "expires_at": "2026-09-27T16:00:00Z",
+      "action_instructions": [
+        "Seek enclosed masonry shelter immediately.",
+        "Avoid tall isolated trees, utility poles, and open bodies of water.",
+        "Disconnect sensitive electronic communication infrastructure."
+      ]
+    }
+  ]
+}

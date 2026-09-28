@@ -1,0 +1,167 @@
+{
+  "scenario_id": "scenario-weakening",
+  "name": "Weakening / Dissipating Storm",
+  "description": "Convective cell entering dissipation stage with decreasing echo tops, decreasing radar reflectivity, and falling lightning rates.",
+  "target_location": {
+    "lat": 19.076,
+    "lon": 72.877,
+    "name": "Mumbai Metropolitan Area"
+  },
+  "timestamp": "2026-09-27T16:00:00Z",
+  "current_eta_minutes": 45,
+  "storm_distance_km": 48.0,
+  "bearing_deg": 35.0,
+  "cardinal_direction": "NE",
+  "forecast": {
+    "15min": {
+      "interval_minutes": 15,
+      "target_timestamp": "2026-09-27T16:15:00Z",
+      "thunderstorm_probability": 0.45,
+      "lightning_probability": 0.32,
+      "rain_intensity_mmh": 18.0,
+      "storm_intensity": "MODERATE",
+      "confidence": 0.90
+    },
+    "30min": {
+      "interval_minutes": 30,
+      "target_timestamp": "2026-09-27T16:30:00Z",
+      "thunderstorm_probability": 0.28,
+      "lightning_probability": 0.15,
+      "rain_intensity_mmh": 8.5,
+      "storm_intensity": "LOW",
+      "confidence": 0.88
+    },
+    "45min": {
+      "interval_minutes": 45,
+      "target_timestamp": "2026-09-27T16:45:00Z",
+      "thunderstorm_probability": 0.14,
+      "lightning_probability": 0.08,
+      "rain_intensity_mmh": 3.0,
+      "storm_intensity": "LOW",
+      "confidence": 0.85
+    },
+    "60min": {
+      "interval_minutes": 60,
+      "target_timestamp": "2026-09-27T17:00:00Z",
+      "thunderstorm_probability": 0.05,
+      "lightning_probability": 0.02,
+      "rain_intensity_mmh": 0.5,
+      "storm_intensity": "LOW",
+      "confidence": 0.82
+    }
+  },
+  "active_storm_cells": [
+    {
+      "id": "CELL-MMR-WEAK-01",
+      "name": "Dissipating Panvel Cell",
+      "timestamp": "2026-09-27T16:00:00Z",
+      "lat": 19.32,
+      "lon": 73.18,
+      "intensity_dbz": 38.0,
+      "intensity_level": "MODERATE",
+      "direction_deg": 210.0,
+      "direction_cardinal": "SSW",
+      "speed_kmh": 28.0,
+      "radius_km": 10.0,
+      "lightning_probability": 0.25,
+      "risk_level": "LOW",
+      "top_altitude_km": 8.5,
+      "trajectory": [
+        {
+          "offset_minutes": 0,
+          "timestamp": "2026-09-27T16:00:00Z",
+          "lat": 19.32,
+          "lon": 73.18,
+          "radius_km": 10.0,
+          "intensity_dbz": 38.0,
+          "confidence": 0.95
+        },
+        {
+          "offset_minutes": 15,
+          "timestamp": "2026-09-27T16:15:00Z",
+          "lat": 19.26,
+          "lon": 73.13,
+          "radius_km": 8.5,
+          "intensity_dbz": 32.0,
+          "confidence": 0.90
+        },
+        {
+          "offset_minutes": 30,
+          "timestamp": "2026-09-27T16:30:00Z",
+          "lat": 19.20,
+          "lon": 73.08,
+          "radius_km": 6.0,
+          "intensity_dbz": 24.0,
+          "confidence": 0.85
+        },
+        {
+          "offset_minutes": 45,
+          "timestamp": "2026-09-27T16:45:00Z",
+          "lat": 19.14,
+          "lon": 73.03,
+          "radius_km": 4.0,
+          "intensity_dbz": 18.0,
+          "confidence": 0.80
+        },
+        {
+          "offset_minutes": 60,
+          "timestamp": "2026-09-27T17:00:00Z",
+          "lat": 19.08,
+          "lon": 72.98,
+          "radius_km": 2.0,
+          "intensity_dbz": 10.0,
+          "confidence": 0.75
+        }
+      ]
+    }
+  ],
+  "lightning_observations": {
+    "timestamp": "2026-09-27T16:00:00Z",
+    "total_strikes_last_15m": 6,
+    "cg_strikes_count": 2,
+    "ic_strikes_count": 4,
+    "strikes": [
+      {
+        "id": "LTG-WEAK-01",
+        "timestamp": "2026-09-27T15:56:10Z",
+        "lat": 19.31,
+        "lon": 73.17,
+        "peak_current_ka": -22.0,
+        "strike_type": "IC",
+        "polarity": "NEGATIVE"
+      }
+    ],
+    "density_heatmap": [
+      { "lat": 19.31, "lon": 73.17, "flash_count_per_sqkm": 0.8, "risk_level": "LOW" }
+    ]
+  },
+  "risk_assessment": {
+    "level": "LOW",
+    "score": 24.5,
+    "confidence": 0.91,
+    "primary_threat": "LIGHT_RAIN_RESIDUAL",
+    "factors": [
+      {
+        "category": "RADAR",
+        "factor_name": "Collapsing Radar Reflectivity Core",
+        "observed_value": "38 dBZ (Decreased from 52 dBZ)",
+        "threshold": "< 40 dBZ",
+        "impact_level": "LOW",
+        "scientific_summary": "Precipitation downdrafts choking updraft buoyancy; cloud top collapsing below freezing level."
+      },
+      {
+        "category": "LIGHTNING",
+        "factor_name": "Decaying Discharge Activity",
+        "observed_value": "2 CG strikes / 15m",
+        "threshold": "< 5 strikes / 15m",
+        "impact_level": "LOW",
+        "scientific_summary": "Charge separation mechanism largely terminated."
+      }
+    ],
+    "actionable_recommendations": [
+      "Normal operations may resume with standard weather monitoring.",
+      "Stand down high-priority emergency alerts."
+    ]
+  },
+  "active_alerts": []
+}

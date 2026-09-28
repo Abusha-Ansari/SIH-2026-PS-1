@@ -1,0 +1,179 @@
+{
+  "scenario_id": "scenario-multiple",
+  "name": "Multiple Convective Cluster Complex",
+  "description": "Multi-cell convective system with independent storm clusters active across North Konkan, Raigad, and Pune-Ghats sector propagating westward.",
+  "target_location": {
+    "lat": 19.076,
+    "lon": 72.877,
+    "name": "Mumbai Metropolitan Area"
+  },
+  "timestamp": "2026-09-27T17:00:00Z",
+  "current_eta_minutes": 22,
+  "storm_distance_km": 26.0,
+  "bearing_deg": 105.0,
+  "cardinal_direction": "ESE",
+  "forecast": {
+    "15min": {
+      "interval_minutes": 15,
+      "target_timestamp": "2026-09-27T17:15:00Z",
+      "thunderstorm_probability": 0.85,
+      "lightning_probability": 0.78,
+      "rain_intensity_mmh": 62.0,
+      "storm_intensity": "HIGH",
+      "confidence": 0.89
+    },
+    "30min": {
+      "interval_minutes": 30,
+      "target_timestamp": "2026-09-27T17:30:00Z",
+      "thunderstorm_probability": 0.92,
+      "lightning_probability": 0.88,
+      "rain_intensity_mmh": 78.0,
+      "storm_intensity": "SEVERE",
+      "confidence": 0.87
+    },
+    "45min": {
+      "interval_minutes": 45,
+      "target_timestamp": "2026-09-27T17:45:00Z",
+      "thunderstorm_probability": 0.89,
+      "lightning_probability": 0.84,
+      "rain_intensity_mmh": 70.0,
+      "storm_intensity": "HIGH",
+      "confidence": 0.84
+    },
+    "60min": {
+      "interval_minutes": 60,
+      "target_timestamp": "2026-09-27T18:00:00Z",
+      "thunderstorm_probability": 0.71,
+      "lightning_probability": 0.62,
+      "rain_intensity_mmh": 44.0,
+      "storm_intensity": "MODERATE",
+      "confidence": 0.80
+    }
+  },
+  "active_storm_cells": [
+    {
+      "id": "CELL-CLUSTER-NORTH",
+      "name": "Vasai-Virar Cell",
+      "timestamp": "2026-09-27T17:00:00Z",
+      "lat": 19.38,
+      "lon": 72.88,
+      "intensity_dbz": 51.0,
+      "intensity_level": "HIGH",
+      "direction_deg": 190.0,
+      "direction_cardinal": "S",
+      "speed_kmh": 36.0,
+      "radius_km": 12.0,
+      "lightning_probability": 0.75,
+      "risk_level": "HIGH",
+      "top_altitude_km": 12.8,
+      "trajectory": [
+        { "offset_minutes": 0, "timestamp": "2026-09-27T17:00:00Z", "lat": 19.38, "lon": 72.88, "radius_km": 12.0, "intensity_dbz": 51.0, "confidence": 0.95 },
+        { "offset_minutes": 15, "timestamp": "2026-09-27T17:15:00Z", "lat": 19.30, "lon": 72.86, "radius_km": 13.0, "intensity_dbz": 53.0, "confidence": 0.90 },
+        { "offset_minutes": 30, "timestamp": "2026-09-27T17:30:00Z", "lat": 19.22, "lon": 72.84, "radius_km": 14.0, "intensity_dbz": 50.0, "confidence": 0.85 },
+        { "offset_minutes": 45, "timestamp": "2026-09-27T17:45:00Z", "lat": 19.14, "lon": 72.82, "radius_km": 12.0, "intensity_dbz": 44.0, "confidence": 0.80 },
+        { "offset_minutes": 60, "timestamp": "2026-09-27T18:00:00Z", "lat": 19.06, "lon": 72.80, "radius_km": 10.0, "intensity_dbz": 38.0, "confidence": 0.75 }
+      ]
+    },
+    {
+      "id": "CELL-CLUSTER-EAST",
+      "name": "Navi Mumbai-Panvel Cell",
+      "timestamp": "2026-09-27T17:00:00Z",
+      "lat": 19.02,
+      "lon": 73.08,
+      "intensity_dbz": 56.5,
+      "intensity_level": "SEVERE",
+      "direction_deg": 280.0,
+      "direction_cardinal": "W",
+      "speed_kmh": 40.0,
+      "radius_km": 16.0,
+      "lightning_probability": 0.90,
+      "risk_level": "HIGH",
+      "top_altitude_km": 15.0,
+      "trajectory": [
+        { "offset_minutes": 0, "timestamp": "2026-09-27T17:00:00Z", "lat": 19.02, "lon": 73.08, "radius_km": 16.0, "intensity_dbz": 56.5, "confidence": 0.96 },
+        { "offset_minutes": 15, "timestamp": "2026-09-27T17:15:00Z", "lat": 19.04, "lon": 72.98, "radius_km": 17.5, "intensity_dbz": 58.0, "confidence": 0.92 },
+        { "offset_minutes": 30, "timestamp": "2026-09-27T17:30:00Z", "lat": 19.06, "lon": 72.88, "radius_km": 19.0, "intensity_dbz": 59.0, "confidence": 0.88 },
+        { "offset_minutes": 45, "timestamp": "2026-09-27T17:45:00Z", "lat": 19.08, "lon": 72.78, "radius_km": 16.0, "intensity_dbz": 52.0, "confidence": 0.84 },
+        { "offset_minutes": 60, "timestamp": "2026-09-27T18:00:00Z", "lat": 19.10, "lon": 72.68, "radius_km": 13.0, "intensity_dbz": 45.0, "confidence": 0.79 }
+      ]
+    },
+    {
+      "id": "CELL-CLUSTER-SOUTH",
+      "name": "Alibaug-Pen Coastal Cell",
+      "timestamp": "2026-09-27T17:00:00Z",
+      "lat": 18.78,
+      "lon": 72.95,
+      "intensity_dbz": 48.0,
+      "intensity_level": "MODERATE",
+      "direction_deg": 320.0,
+      "direction_cardinal": "NW",
+      "speed_kmh": 32.0,
+      "radius_km": 11.0,
+      "lightning_probability": 0.60,
+      "risk_level": "MEDIUM",
+      "top_altitude_km": 11.5,
+      "trajectory": [
+        { "offset_minutes": 0, "timestamp": "2026-09-27T17:00:00Z", "lat": 18.78, "lon": 72.95, "radius_km": 11.0, "intensity_dbz": 48.0, "confidence": 0.93 },
+        { "offset_minutes": 15, "timestamp": "2026-09-27T17:15:00Z", "lat": 18.84, "lon": 72.89, "radius_km": 12.0, "intensity_dbz": 49.0, "confidence": 0.88 },
+        { "offset_minutes": 30, "timestamp": "2026-09-27T17:30:00Z", "lat": 18.90, "lon": 72.83, "radius_km": 12.5, "intensity_dbz": 47.0, "confidence": 0.83 },
+        { "offset_minutes": 45, "timestamp": "2026-09-27T17:45:00Z", "lat": 18.96, "lon": 72.77, "radius_km": 11.0, "intensity_dbz": 42.0, "confidence": 0.78 },
+        { "offset_minutes": 60, "timestamp": "2026-09-27T18:00:00Z", "lat": 19.02, "lon": 72.71, "radius_km": 9.0, "intensity_dbz": 36.0, "confidence": 0.72 }
+      ]
+    }
+  ],
+  "lightning_observations": {
+    "timestamp": "2026-09-27T17:00:00Z",
+    "total_strikes_last_15m": 94,
+    "cg_strikes_count": 61,
+    "ic_strikes_count": 33,
+    "strikes": [
+      { "id": "LTG-M-01", "timestamp": "2026-09-27T16:58:12Z", "lat": 19.03, "lon": 73.06, "peak_current_ka": -52.0, "strike_type": "CG", "polarity": "NEGATIVE" },
+      { "id": "LTG-M-02", "timestamp": "2026-09-27T16:57:44Z", "lat": 19.37, "lon": 72.87, "peak_current_ka": 44.0, "strike_type": "CG", "polarity": "POSITIVE" },
+      { "id": "LTG-M-03", "timestamp": "2026-09-27T16:56:19Z", "lat": 18.79, "lon": 72.94, "peak_current_ka": -31.0, "strike_type": "IC", "polarity": "NEGATIVE" }
+    ],
+    "density_heatmap": [
+      { "lat": 19.03, "lon": 73.06, "flash_count_per_sqkm": 9.8, "risk_level": "HIGH" },
+      { "lat": 19.37, "lon": 72.87, "flash_count_per_sqkm": 7.4, "risk_level": "HIGH" },
+      { "lat": 18.79, "lon": 72.94, "flash_count_per_sqkm": 4.1, "risk_level": "MEDIUM" }
+    ]
+  },
+  "risk_assessment": {
+    "level": "HIGH",
+    "score": 90.0,
+    "confidence": 0.88,
+    "primary_threat": "CONVERGENT_MULTI_CELL_IMPACT",
+    "factors": [
+      {
+        "category": "RADAR",
+        "factor_name": "Multi-Cell Boundary Interaction",
+        "observed_value": "3 distinct convective cores (> 50 dBZ)",
+        "threshold": "> 2 active cores",
+        "impact_level": "HIGH",
+        "scientific_summary": "Outflow boundaries from converging north and east cells trigger secondary explosive convection over Mumbai."
+      }
+    ],
+    "actionable_recommendations": [
+      "Coordinate multi-zone emergency services across Mumbai, Thane, and Navi Mumbai.",
+      "Issue citywide commuter warnings before peak evening transit."
+    ]
+  },
+  "active_alerts": [
+    {
+      "id": "ALT-2026-0927-MUL-01",
+      "severity": "WARNING",
+      "type": "THUNDERSTORM",
+      "title": "Multiple Convective Storm Clusters Active",
+      "message": "Multiple active thunderstorm cells converging towards Mumbai from North, East, and South. Gusty winds and frequent lightning expected.",
+      "region_name": "Konkan Coastal Belt",
+      "center_lat": 19.076,
+      "center_lon": 72.877,
+      "radius_km": 50.0,
+      "eta_minutes": 22,
+      "created_at": "2026-09-27T17:00:00Z",
+      "expires_at": "2026-09-27T18:30:00Z",
+      "action_instructions": [
+        "Plan travel carefully and monitor real-time storm radar updates."
+      ]
+    }
+  ]
+}

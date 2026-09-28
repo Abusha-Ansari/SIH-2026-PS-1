@@ -1,0 +1,207 @@
+{
+  "scenario_id": "scenario-severe",
+  "name": "Severe Convective Squall Line",
+  "description": "Intense mesoscale convective system with severe cloud-to-ground lightning discharge clusters, gale-force downdraft wind shear, and torrential rain > 90 mm/h.",
+  "target_location": {
+    "lat": 19.076,
+    "lon": 72.877,
+    "name": "Mumbai Metropolitan Area"
+  },
+  "timestamp": "2026-09-27T15:00:00Z",
+  "current_eta_minutes": 12,
+  "storm_distance_km": 14.8,
+  "bearing_deg": 65.0,
+  "cardinal_direction": "ENE",
+  "forecast": {
+    "15min": {
+      "interval_minutes": 15,
+      "target_timestamp": "2026-09-27T15:15:00Z",
+      "thunderstorm_probability": 0.98,
+      "lightning_probability": 0.95,
+      "rain_intensity_mmh": 94.0,
+      "storm_intensity": "SEVERE",
+      "confidence": 0.96
+    },
+    "30min": {
+      "interval_minutes": 30,
+      "target_timestamp": "2026-09-27T15:30:00Z",
+      "thunderstorm_probability": 0.95,
+      "lightning_probability": 0.92,
+      "rain_intensity_mmh": 88.0,
+      "storm_intensity": "SEVERE",
+      "confidence": 0.93
+    },
+    "45min": {
+      "interval_minutes": 45,
+      "target_timestamp": "2026-09-27T15:45:00Z",
+      "thunderstorm_probability": 0.82,
+      "lightning_probability": 0.76,
+      "rain_intensity_mmh": 54.0,
+      "storm_intensity": "HIGH",
+      "confidence": 0.88
+    },
+    "60min": {
+      "interval_minutes": 60,
+      "target_timestamp": "2026-09-27T16:00:00Z",
+      "thunderstorm_probability": 0.61,
+      "lightning_probability": 0.50,
+      "rain_intensity_mmh": 28.0,
+      "storm_intensity": "MODERATE",
+      "confidence": 0.81
+    }
+  },
+  "active_storm_cells": [
+    {
+      "id": "CELL-MMR-SEV-01",
+      "name": "Navi Mumbai - Ghatkopar Bow Echo",
+      "timestamp": "2026-09-27T15:00:00Z",
+      "lat": 19.142,
+      "lon": 72.998,
+      "intensity_dbz": 62.8,
+      "intensity_level": "EXTREME",
+      "direction_deg": 245.0,
+      "direction_cardinal": "WSW",
+      "speed_kmh": 55.0,
+      "radius_km": 22.0,
+      "lightning_probability": 0.96,
+      "risk_level": "EXTREME",
+      "top_altitude_km": 16.5,
+      "trajectory": [
+        {
+          "offset_minutes": 0,
+          "timestamp": "2026-09-27T15:00:00Z",
+          "lat": 19.142,
+          "lon": 72.998,
+          "radius_km": 22.0,
+          "intensity_dbz": 62.8,
+          "confidence": 0.99
+        },
+        {
+          "offset_minutes": 15,
+          "timestamp": "2026-09-27T15:15:00Z",
+          "lat": 19.068,
+          "lon": 72.885,
+          "radius_km": 24.0,
+          "intensity_dbz": 63.5,
+          "confidence": 0.96
+        },
+        {
+          "offset_minutes": 30,
+          "timestamp": "2026-09-27T15:30:00Z",
+          "lat": 18.995,
+          "lon": 72.772,
+          "radius_km": 22.0,
+          "intensity_dbz": 56.0,
+          "confidence": 0.91
+        },
+        {
+          "offset_minutes": 45,
+          "timestamp": "2026-09-27T15:45:00Z",
+          "lat": 18.920,
+          "lon": 72.658,
+          "radius_km": 19.0,
+          "intensity_dbz": 48.0,
+          "confidence": 0.85
+        },
+        {
+          "offset_minutes": 60,
+          "timestamp": "2026-09-27T16:00:00Z",
+          "lat": 18.845,
+          "lon": 72.545,
+          "radius_km": 15.0,
+          "intensity_dbz": 38.0,
+          "confidence": 0.79
+        }
+      ]
+    }
+  ],
+  "lightning_observations": {
+    "timestamp": "2026-09-27T15:00:00Z",
+    "total_strikes_last_15m": 142,
+    "cg_strikes_count": 98,
+    "ic_strikes_count": 44,
+    "strikes": [
+      {
+        "id": "LTG-SEV-01",
+        "timestamp": "2026-09-27T14:59:10Z",
+        "lat": 19.135,
+        "lon": 72.985,
+        "peak_current_ka": -78.4,
+        "strike_type": "CG",
+        "polarity": "NEGATIVE"
+      },
+      {
+        "id": "LTG-SEV-02",
+        "timestamp": "2026-09-27T14:58:32Z",
+        "lat": 19.148,
+        "lon": 73.010,
+        "peak_current_ka": 92.5,
+        "strike_type": "CG",
+        "polarity": "POSITIVE"
+      },
+      {
+        "id": "LTG-SEV-03",
+        "timestamp": "2026-09-27T14:57:45Z",
+        "lat": 19.122,
+        "lon": 72.965,
+        "peak_current_ka": -64.2,
+        "strike_type": "CG",
+        "polarity": "NEGATIVE"
+      }
+    ],
+    "density_heatmap": [
+      { "lat": 19.14, "lon": 72.99, "flash_count_per_sqkm": 16.8, "risk_level": "EXTREME" },
+      { "lat": 19.11, "lon": 72.95, "flash_count_per_sqkm": 12.4, "risk_level": "EXTREME" },
+      { "lat": 19.08, "lon": 72.89, "flash_count_per_sqkm": 8.1, "risk_level": "HIGH" }
+    ]
+  },
+  "risk_assessment": {
+    "level": "EXTREME",
+    "score": 96.8,
+    "confidence": 0.95,
+    "primary_threat": "EXTREME_LIGHTNING_AND_FLASH_FLOOD",
+    "factors": [
+      {
+        "category": "RADAR",
+        "factor_name": "Bow Echo Radar Signature",
+        "observed_value": "62.8 dBZ with Rear Inflow Jet",
+        "threshold": "> 55.0 dBZ",
+        "impact_level": "CRITICAL",
+        "scientific_summary": "Distinctive bow echo geometry indicating destructive surface wind gusts exceeding 75 km/h."
+      },
+      {
+        "category": "LIGHTNING",
+        "factor_name": "Extreme CG Lightning Frequency",
+        "observed_value": "98 CG discharges / 15m (6.5 strikes/min)",
+        "threshold": "> 40 discharges / 15m",
+        "impact_level": "CRITICAL",
+        "scientific_summary": "Extremely dense charge separation within vigorous mixed-phase convective zone."
+      }
+    ],
+    "actionable_recommendations": [
+      "RED ALERT: Immediate halt of rail, road, and port operations.",
+      "Activate municipal emergency sirens and broadcast mobile cell-broadcast warnings.",
+      "Halt incoming airport traffic at BOM / CSIA."
+    ]
+  },
+  "active_alerts": [
+    {
+      "id": "ALT-2026-0927-SEV-01",
+      "severity": "CRITICAL",
+      "type": "HIGH_RISK",
+      "title": "RED WARNING: Extreme Thunderstorm Squall Approaching",
+      "message": "Dangerous convective squall line with 60+ dBZ radar core and intense lightning strikes ETA 12 minutes over central Mumbai.",
+      "region_name": "Greater Mumbai & Thane",
+      "center_lat": 19.076,
+      "center_lon": 72.877,
+      "radius_km": 40.0,
+      "eta_minutes": 12,
+      "created_at": "2026-09-27T15:00:00Z",
+      "expires_at": "2026-09-27T16:30:00Z",
+      "action_instructions": [
+        "Take immediate shelter indoors away from windows.",
+        "Remain in place until squall front fully passes."
+      ]
+    }
+  ]
+}
