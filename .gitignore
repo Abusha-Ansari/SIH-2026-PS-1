@@ -1,44 +1,85 @@
-# Node.js / Next.js
-frontend/node_modules/
-frontend/.next/
-frontend/out/
-node_modules/
-.next/
+# ==============================================================================
+# THUNDER-X Comprehensive .gitignore
+# ==============================================================================
 
-# Environment Variables
+# ------------------------------------------------------------------------------
+# 1. Environment & Secret Variables (Ignore all .env files EXCEPT .env.example)
+# ------------------------------------------------------------------------------
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-frontend/.env.local
-backend/.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!**/.env.example
 
-# Python
+# ------------------------------------------------------------------------------
+# 2. Node.js & Frontend (Next.js, Vite, etc.)
+# ------------------------------------------------------------------------------
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+out/
+**/out/
+.turbo/
+**/.turbo/
+build/
+**/build/
+dist/
+**/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# ------------------------------------------------------------------------------
+# 3. Python & Backend (FastAPI, Uvicorn, Pytest)
+# ------------------------------------------------------------------------------
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-backend/__pycache__/
-backend/app/__pycache__/
-backend/app/*/__pycache__/
-.pytest_cache/
-.coverage
-htmlcov/
-dist/
-build/
-*.egg-info/
-.venv/
-venv/
-ENV/
 
-# OS & IDE
+# Virtual Environments
+.venv/
+**/.venv/
+venv/
+**/venv/
+env/
+**/env/
+ENV/
+**/ENV/
+
+# Testing & Coverage
+.pytest_cache/
+**/.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Packaging
+*.egg-info/
+**/*.egg-info/
+*.egg
+
+# ------------------------------------------------------------------------------
+# 4. OS & IDE Metadata
+# ------------------------------------------------------------------------------
 .DS_Store
 Thumbs.db
+desktop.ini
 .vscode/
+**/.vscode/
 .idea/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+**/.idea/
+*.swp
+*.swo
+*~
