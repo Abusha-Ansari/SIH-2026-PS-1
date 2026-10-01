@@ -14,6 +14,7 @@ class Settings(BaseSettings):
         "http://127.0.0.1:3000",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://sih-2026-ps-1.vercel.app",
     ]
     PREDICTION_PROVIDER: str = "mock"  # "mock" or "ml"
     ML_SERVICE_URL: str = "http://localhost:8001"
