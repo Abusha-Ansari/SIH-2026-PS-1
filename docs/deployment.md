@@ -37,8 +37,9 @@ Deploy the **Frontend on Vercel** and the **Backend on Render / Railway** (Both 
    - **Root Directory:** `frontend`
 4. Add Environment Variables:
    ```env
-   NEXT_PUBLIC_API_URL=https://thunderx-backend.onrender.com
+   NEXT_PUBLIC_API_URL=https://sih-2026-ps-1.onrender.com
    ```
+   *(Note: Keep the `NEXT_PUBLIC_` prefix on Vercel so Next.js embeds the URL in the browser bundle for client-side API calls).*
 5. Click **Deploy**. Vercel will build and deploy your frontend to a live URL (e.g., `https://thunder-x.vercel.app`).
 
 ---

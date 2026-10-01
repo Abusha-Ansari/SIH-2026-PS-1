@@ -9,7 +9,8 @@ import {
   ApiResponse
 } from '../types';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const rawApiBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE = rawApiBase.replace(/\/+$/, '');
 
 async function fetchJson<T>(endpoint: string, params?: Record<string, any>): Promise<T> {
   const url = new URL(`${API_BASE}${endpoint}`);
